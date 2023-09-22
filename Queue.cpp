@@ -1,11 +1,10 @@
 #include <iostream>
-#include <string.h>
 
 using namespace std;
 class Queue{
     private:
         struct node{
-            char* data;
+            int data;
             struct node* next;
         };
         struct node* front;
@@ -40,9 +39,9 @@ class Queue{
             
         }
       
-        char* dequeue(){
+        int dequeue(){
             struct node* node2 = new node;
-            char* data = front->data;
+            int data = front->data;
             
             node2=front;
             front=front->next;
@@ -55,7 +54,7 @@ class Queue{
 
 
         }
-        void append(char* data){
+        void append(int data){
             struct node* node2 = new node;
             node2->data=data;
             node2->next=front;
@@ -100,14 +99,13 @@ int main(int argc, char const *argv[])
     srand(time(0)); 
     Queue* a = new Queue();
    
-    char p[20]="Last";
-    a->append(p);
-    char s[20]="2ndLast";
-    //a->append(s);
-   //a->remove(9);
-   a->print();
-   cout<<a->dequeue()<<endl;
-   a->print();
-   delete a;
+    int d1=1;
+    a->append(d1);
+    int d2 =2;
+    a->append(d2);
+    a->print();
+    cout<<a->dequeue()<<endl;
+    a->print();
+    delete a;
     return 0;
 }
