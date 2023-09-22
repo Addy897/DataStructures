@@ -1,9 +1,7 @@
 #include <iostream>
-//#include <chrono>
 #include <ctime>
 #include <cmath>
 using namespace std;
-//using namespace std::chrono;
 class CArray
 {
      private:
